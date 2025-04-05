@@ -10,7 +10,7 @@ import { Messages } from "./messages";
 import { Header } from "./header";
 
 export default function Chat() {
-  const [selectedModel, setSelectedModel] = useState<modelID>("llama-4-scout-17b-16e-instruct");
+  const [selectedModel, setSelectedModel] = useState<modelID>("meta-llama/llama-4-scout-17b-16e-instruct");
   const {
     messages,
     input,
