@@ -8,7 +8,7 @@ import {
 // custom provider with different model settings:
 export const model = customProvider({
   languageModels: {
-    "llama-4-scout-17b-16e-instruct": groq("meta-llama/llama-4-scout-17b-16e-instruct"),
+    "meta-llama/llama-4-scout-17b-16e-instruct": groq("meta-llama/llama-4-scout-17b-16e-instruct"),
     "llama-3.1-8b-instant": groq("llama-3.1-8b-instant"),
     "deepseek-r1-distill-llama-70b": wrapLanguageModel({
       middleware: extractReasoningMiddleware({
