@@ -1,5 +1,5 @@
 "use client";
-import { modelID } from "@/ai/providers";
+import { modelID, MODELS } from "@/ai/providers";
 import {
   Select,
   SelectContent,
@@ -14,13 +14,6 @@ interface ModelPickerProps {
   setSelectedModel: (model: modelID) => void;
 }
 
-const MODELS: Record<modelID, string> = {
-  "meta-llama/llama-4-scout-17b-16e-instruct": "Meta's latest and greatest",
-  "llama-3.1-8b-instant": "A fast cheap model",
-  "deepseek-r1-distill-llama-70b": "A reasoning model",
-  "llama-3.3-70b-versatile": "A large model",
-};
-
 export const ModelPicker = ({
   selectedModel,
   setSelectedModel,
@@ -33,7 +26,7 @@ export const ModelPicker = ({
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            {Object.entries(MODELS).map(([modelId]) => (
+            {MODELS.map((modelId) => (
               <SelectItem key={modelId} value={modelId}>
                 {modelId}
               </SelectItem>

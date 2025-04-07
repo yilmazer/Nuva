@@ -1,6 +1,6 @@
 "use client";
 
-import { modelID } from "@/ai/providers";
+import { defaultModel, modelID } from "@/ai/providers";
 import { useChat } from "@ai-sdk/react";
 import { useState } from "react";
 // import { ModelPicker } from "./model-picker";
@@ -10,7 +10,7 @@ import { Messages } from "./messages";
 import { Header } from "./header";
 
 export default function Chat() {
-  const [selectedModel, setSelectedModel] = useState<modelID>("meta-llama/llama-4-scout-17b-16e-instruct");
+  const [selectedModel, setSelectedModel] = useState<modelID>(defaultModel);
   const {
     messages,
     input,
