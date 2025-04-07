@@ -25,7 +25,7 @@ export const model = customProvider({
 
 export type modelID = keyof typeof languageModels;
 
+export const MODELS = Object.keys(languageModels);
+
 export const defaultModel: modelID =
   "meta-llama/llama-4-scout-17b-16e-instruct";
-
-export const MODELS = Object.keys(languageModels);
