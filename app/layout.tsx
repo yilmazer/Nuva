@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vercel x Groq Chatbot",
+  title: "Nuva",
   description:
-    "This starter project uses Groq with the AI SDK via the Vercel Marketplace",
+    "Your personal AI assistant for Vercel, powered by Groq and the AI SDK.",
 };
 
 export default function RootLayout({

@@ -25,10 +25,10 @@ export const Textarea = ({
   return (
     <div className="relative w-full pt-4">
       <ShadcnTextarea
-        className="resize-none bg-secondary w-full rounded-2xl pr-12 pt-4 pb-16"
+        className="resize-none bg-secondary w-full rounded-2xl pr-12 pt-4 pb-12"
         value={input}
         autoFocus
-        placeholder={"Say something..."}
+        placeholder={"Enter your message..."}
         // @ts-expect-error err
         onChange={handleInputChange}
         onKeyDown={(e) => {
@@ -45,6 +45,7 @@ export const Textarea = ({
       <ModelPicker
         setSelectedModel={setSelectedModel}
         selectedModel={selectedModel}
+        style={{ display: "none" }}
       />
 
       {status === "streaming" || status === "submitted" ? (

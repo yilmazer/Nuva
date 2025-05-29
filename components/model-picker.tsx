@@ -17,9 +17,10 @@ interface ModelPickerProps {
 export const ModelPicker = ({
   selectedModel,
   setSelectedModel,
-}: ModelPickerProps) => {
+  style,
+}: ModelPickerProps & { style?: React.CSSProperties }) => {
   return (
-    <div className="absolute bottom-2 left-2 flex flex-col gap-2">
+    <div className="absolute bottom-2 left-2 flex flex-col gap-2" style={style}>
       <Select value={selectedModel} onValueChange={setSelectedModel}>
         <SelectTrigger className="">
           <SelectValue placeholder="Select a model" />

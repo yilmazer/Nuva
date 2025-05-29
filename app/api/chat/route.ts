@@ -1,5 +1,4 @@
 import { model, modelID } from "@/ai/providers";
-import { weatherTool } from "@/ai/tools";
 import { streamText, UIMessage } from "ai";
 
 // Allow streaming responses up to 30 seconds
@@ -13,11 +12,8 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: model.languageModel(selectedModel),
-    system: "You are a helpful assistant.",
+    system: "Provide a clear and informative response, balancing depth and simplicity.",
     messages,
-    tools: {
-      getWeather: weatherTool,
-    },
     experimental_telemetry: {
       isEnabled: true,
     },
